@@ -16,6 +16,8 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
+  spec.add_development_dependency "rake"
   # spec.add_dependency "rails", "~> 5.2.4", ">= 5.2.4.4"
   spec.add_dependency 'rmagick', '>= 4.0.0'
+  spec.add_runtime_dependency "i18n"
 end
