@@ -1,5 +1,7 @@
 # GifCountdown
 
+[![Gem Version](https://badge.fury.io/rb/gif_countdown.svg)](https://badge.fury.io/rb/gif_countdown)
+
 Create a animated gif countdown picture using RMagick.
 
 Each frame is a second.
