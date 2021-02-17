@@ -1,0 +1,15 @@
+en:
+  gif_countdown:
+    days:
+      one: day
+      other: days
+    hours:
+      one: hour
+      other: hours
+    minutes:
+      one: minute
+      other: minutes
+    seconds:
+      one: second
+      other: seconds
+

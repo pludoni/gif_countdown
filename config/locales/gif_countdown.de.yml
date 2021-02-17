@@ -1,0 +1,14 @@
+de:
+  gif_countdown:
+    days:
+      one: Tag
+      other: Tage
+    hours:
+      one: Stunde
+      other: Stunden
+    minutes:
+      one: Minute
+      other: Minuten
+    seconds:
+      one: Sekunde
+      other: Sekunden
