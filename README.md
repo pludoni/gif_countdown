@@ -6,7 +6,7 @@ Each frame is a second.
 
 Useful for mailings campaign / event notifications.
 
-![Example][./doc/example.gif]
+![Example](https://raw.githubusercontent.com/zealot128/gif_countdown/main/doc/example.gif)
 
 ## Usage
 
