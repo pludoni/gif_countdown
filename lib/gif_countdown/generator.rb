@@ -24,7 +24,7 @@ class GifCountdown::Generator
       annotate_with_countdown(image: image, seconds: @distance_in_seconds - i)
       gif << image
     end
-    gif.to_blob { self.format = 'gif' }
+    gif.to_blob { |img| img.format = 'gif' }
   end
 
   def pluralize(count, key)
@@ -41,43 +41,43 @@ class GifCountdown::Generator
 
     text_y = height / 2 + padding_x / 2
     x = padding_x
-    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:days]) {
-      self.pointsize = this.fontsize
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:days]) { |img|
+      img.pointsize = this.fontsize
+      img.font_family = this.font
     }
-    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:days], :days)) {
-      self.pointsize = (this.fontsize * 0.7).round
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:days], :days)) { |img|
+      img.pointsize = (this.fontsize * 0.7).round
+      img.font_family = this.font
     }
 
     x = padding_x * 2 + boxwidth
-    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:hours]) {
-      self.pointsize = this.fontsize
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:hours]) { |img|
+      img.pointsize = this.fontsize
+      img.font_family = this.font
     }
-    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:hours], :hours)) {
-      self.pointsize = (this.fontsize * 0.7).round
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:hours], :hours)) { |img|
+      img.pointsize = (this.fontsize * 0.7).round
+      img.font_family = this.font
     }
 
     x = padding_x * 3 + boxwidth * 2
-    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:minutes]) {
-      self.pointsize = this.fontsize
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:minutes]) { |img|
+      img.pointsize = this.fontsize
+      img.font_family = this.font
     }
-    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:minutes], :minutes)) {
-      self.pointsize = (this.fontsize * 0.7).round
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:minutes], :minutes)) { |img|
+      img.pointsize = (this.fontsize * 0.7).round
+      img.font_family = this.font
     }
 
     x = padding_x * 4 + boxwidth * 3
-    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:seconds]) {
-      self.pointsize = this.fontsize
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, 0, parts[:seconds]) { |img|
+      img.pointsize = this.fontsize
+      img.font_family = this.font
     }
-    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:seconds], :seconds)) {
-      self.pointsize = (this.fontsize * 0.7).round
-      self.font_family = this.font
+    image.annotate(draw, boxwidth, height / 2, x, text_y, pluralize(parts[:seconds], :seconds)) { |img|
+      img.pointsize = (this.fontsize * 0.7).round
+      img.font_family = this.font
     }
   end
 
